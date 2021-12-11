@@ -262,3 +262,744 @@ Migrating to CreatePosts (20211211073103)
   [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:17:23 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 6970)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:17:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts" for 127.0.0.1 at 2021-12-11 08:18:11 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3326)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:21:18 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:23:18 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 6974)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:23:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:29:43 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.9ms | Allocations: 294)
+Completed 200 OK in 39ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 1746)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-11 08:29:50 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 75)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6203)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:29:57 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:34:14 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.7ms | Allocations: 294)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 1744)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-11 08:34:18 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 75)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 6195)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:34:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:35:10 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 6980)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:35:16 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:40:46 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 6974)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-11 08:40:55 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3303)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:41:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2021-12-11 08:49:08 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 6982)
+
+
+Started GET "/new" for 127.0.0.1 at 2021-12-11 08:49:12 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:76:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /usr/local/rbenv/versions/2.7.0/bin/rake:23)
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:11:38 +0000
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 78.2ms | ActiveRecord: 0.0ms | Allocations: 6988)
+
+
+Started GET "/posts.new" for 127.0.0.1 at 2021-12-11 09:11:44 +0000
+Processing by PostsController#index as 
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3449)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:11:50 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 259.4ms | Allocations: 18833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 294ms (Views: 274.0ms | ActiveRecord: 0.7ms | Allocations: 25586)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:15:38 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 6972)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:15:48 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 66.5ms | Allocations: 12803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 71.3ms | ActiveRecord: 0.6ms | Allocations: 19529)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:16:11 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 5265)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 8484)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:17:57 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 6971)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:18:06 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 96.8ms | Allocations: 12808)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119ms (Views: 105.8ms | ActiveRecord: 0.7ms | Allocations: 19551)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:18:31 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3303)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:18:52 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 3287)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:30:29 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1013ms (Views: 1006.1ms | ActiveRecord: 0.0ms | Allocations: 89718)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:30:37 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 54.1ms | Allocations: 12810)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 73.8ms | ActiveRecord: 1.3ms | Allocations: 23053)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:30:45 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 5265)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 12105)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:30:48 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 5656)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 34.3ms | ActiveRecord: 1.0ms | Allocations: 16765)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:40:28 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 16126)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:40:40 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 37.2ms | Allocations: 12806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 67.0ms | ActiveRecord: 1.5ms | Allocations: 23165)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-12-11 09:41:13 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"yuYu7H2APpkgyuHnYoHjNxXtKjA4wYc1ff4lZ6EGE0rfmnsQo8ZHjTLsX6RlHxpe6q3NDAvBSNs/uMqkERKkjA==", "post"=>{"title"=>"sample post", "content"=>"test new post"}, "commit"=>"Create new post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sample post"], ["content", "test new post"], ["created_at", "2021-12-11 09:41:13.457019"], ["updated_at", "2021-12-11 09:41:13.457019"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to https://localhost-chat-app-it-nihongo3.paiza-user-free.cloud:3000/posts/1
+Completed 302 Found in 15ms (ActiveRecord: 5.3ms | Allocations: 4837)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-11 09:41:13 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 0.3ms | Allocations: 8123)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:42:43 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5280)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 11999)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:51:18 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 16472)
+
+
+Started GET "/posts/ne" for 127.0.0.1 at 2021-12-11 09:51:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ne"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.4ms | Allocations: 2086)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=ne):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started GET "/posts/" for 127.0.0.1 at 2021-12-11 09:51:33 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 6980)
+
+
+Started GET "/posts/show" for 127.0.0.1 at 2021-12-11 09:51:44 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1117)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=show):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:51:47 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 46.7ms | Allocations: 14856)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 67.1ms | ActiveRecord: 0.0ms | Allocations: 24327)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-12-11 09:52:03 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"mJTxDhikeU7qa6INvrZ7roMzkoGGnl6NuLF3fmbRmRON6KTyxuIAWvhNHE65KILHfHN1vbWekWP695i91sUu1Q==", "post"=>{"title"=>"sample post 1", "content"=>"test"}, "commit"=>"Create new post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sample post 1"], ["content", "test"], ["created_at", "2021-12-11 09:52:03.504103"], ["updated_at", "2021-12-11 09:52:03.504103"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to https://localhost-chat-app-it-nihongo3.paiza-user-free.cloud:3000/posts/2
+Completed 302 Found in 17ms (ActiveRecord: 7.2ms | Allocations: 4259)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-11 09:52:03 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.2ms | Allocations: 7608)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2021-12-11 09:52:18 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 6842)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 09:52:27 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 13118)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2021-12-11 09:52:34 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 990)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms | Allocations: 7955)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:55:23 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.4ms | Allocations: 7624)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-11 09:55:32 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms | Allocations: 7599)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:55:50 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 63.7ms | ActiveRecord: 0.9ms | Allocations: 20480)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2021-12-11 09:56:17 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 790)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms | Allocations: 7628)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 09:56:28 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.4ms | Allocations: 8953)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-11 09:56:32 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 21.9ms | ActiveRecord: 0.4ms | Allocations: 9817)
+
+

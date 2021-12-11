@@ -1003,3 +1003,33 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 42ms (Views: 21.9ms | ActiveRecord: 0.4ms | Allocations: 9817)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-11 10:06:04 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4361)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 54.8ms | ActiveRecord: 0.9ms | Allocations: 20715)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-11 10:08:34 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1054)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.4ms | Allocations: 8869)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-11 10:08:42 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 36.3ms | Allocations: 12747)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 19735)
+
+

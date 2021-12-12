@@ -1,0 +1,44 @@
+<div class="section">
+  <div class="container is-flex is-justify-content-center">
+    <div class="content is-medium is-narrow" style="width: 480px">
+      <h2>Sign up</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url:
+      registration_path(resource_name)) do |f| %> <%= f.error_notification %>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <%= f.text_field :email, required: true, autofocus: true,
+          autocomplete: "email", class: "input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <%= f.password_field :password, required: true, class: "input"%>
+        </div>
+        <p class="help">Minimum 6 characters</p>
+      </div>
+
+      <div class="field">
+        <label class="label">Confirm password</label>
+        <div class="control">
+          <%= f.password_field :password_confirmation, required: true, class:
+          "input"%>
+        </div>
+      </div>
+
+      <div class="control">
+        <%= f.submit "Submit", class: "button is-primary", style: "width: 100%;
+        margin-top: 40px;" %>
+      </div>
+
+      <% end %>
+      <div style="font-size: 14px; text-align: center; margin-top: 16px">
+        <span><%= render "devise/shared/links" %></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Everything Blog</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -27,7 +27,13 @@
           <div class="navbar-end">
               
             <%= link_to "Create new post", new_post_path, class:"navbar-item" %>
-            
+            <% if user_signed_in? %>
+              <%= link_to current_user.email, users_show_path, class:"navbar-item" %>
+              <%= link_to "Logout", destroy_user_session_path, class:"navbar-item", method: :delete %>
+            <% else %>
+              <%= link_to "Register", new_user_registration_path, class:"navbar-item" %>
+              <%= link_to "Login", new_user_session_path, class:"navbar-item" %>
+            <% end %>  
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
-<% content_for:page_title, "Index" %>
+<% content_for:page_title, "Blog" %>
 
 
 <section class="section">
     <div class="container">
-        <%= @post.each do |post| %>
+        <% @post.each do |post| %>
             <div class="card">
                 <div class="card-content">
                     <div class="media">
@@ -15,7 +15,7 @@
                         <%= post.content %>
                     </div>
                     <!-- <div class="comment-count">
-                        <span class="tag is-rounded"><%# comment count%></span>
+                        <span class="tag is-rounded"><%# comment.count%></span>
                     </div> -->
                     
                 </div>

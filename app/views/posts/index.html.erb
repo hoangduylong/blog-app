@@ -1,4 +1,4 @@
-<% content_for:page_title, "Blog" %>
+<% content_for:page_title, "Everything Blog" %>
 
 
 <section class="section">
@@ -13,6 +13,9 @@
                     </div>
                     <div class="content">
                         <%= post.content %>
+                    </div>
+                    <div class="time">
+                        <%= post.updated_at %>
                     </div>
                     <!-- <div class="comment-count">
                         <span class="tag is-rounded"><%# comment.count%></span>

@@ -2252,3 +2252,699 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms | Allocations: 8964)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:40:19 +0000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4280)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 193ms (Views: 176.5ms | ActiveRecord: 2.2ms | Allocations: 27952)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-12 05:40:31 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 104.1ms | Allocations: 19169)
+  Rendered posts/new.html.erb within layouts/application (Duration: 106.0ms | Allocations: 19467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.0ms | Allocations: 26582)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-12-12 05:43:10 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"xz96CDaBaP0cZqVAHP4yM3jgaemXCnbf6MLwEXI8lQGCykdRkYx2CAa5RYAnmCdORcb2hv6WpoAlsykM2U871A==", "post"=>{"title"=>"Welcome to Cairns", "content"=>"I am not sure how it is January 2013 and I am still posting photos from Australia, but here we are. Please excuse the long detour from my last post. Now on with the rest of the show! Giddy with excitement to see another part of the country, we left Sydney and flew into Cairns, Queensland, about a 3-hour flight. We were hoping for tropical weather, but was greeted with gray skies and a dried up harbour. Hmm, not quite the paradise we had in mind, but we made the best of it. Cairns is best known as the gateway to the Great Barrier Reef, something we promised ourselves we wouldn’t miss while we were in the country. We spent our first day walking around and getting the lay of the land. In a couple of photos… Above is a photo of the Esplanade, a 51,667-square-foot saltwater lagoon. We would’ve taken a dip, but it wasn’t quite warm enough (even though it was much warmer here than in Sydney). Stop back again soon to see …"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Welcome to Cairns"], ["content", "I am not sure how it is January 2013 and I am still posting photos from Australia, but here we are. Please excuse the long detour from my last post. Now on with the rest of the show! Giddy with excitement to see another part of the country, we left Sydney and flew into Cairns, Queensland, about a 3-hour flight. We were hoping for tropical weather, but was greeted with gray skies and a dried up harbour. Hmm, not quite the paradise we had in mind, but we made the best of it. Cairns is best known as the gateway to the Great Barrier Reef, something we promised ourselves we wouldn’t miss while we were in the country. We spent our first day walking around and getting the lay of the land. In a couple of photos… Above is a photo of the Esplanade, a 51,667-square-foot saltwater lagoon. We would’ve taken a dip, but it wasn’t quite warm enough (even though it was much warmer here than in Sydney). Stop back again soon to see …"], ["created_at", "2021-12-12 05:43:10.824094"], ["updated_at", "2021-12-12 05:43:10.824094"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts/3
+Completed 302 Found in 21ms (ActiveRecord: 5.4ms | Allocations: 4964)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-12 05:43:10 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 24.4ms | Allocations: 10456)
+  Rendered posts/show.html.erb within layouts/application (Duration: 65.3ms | Allocations: 18211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 79.7ms | ActiveRecord: 1.5ms | Allocations: 26485)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:43:16 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 7659)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-12 05:43:22 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 1.3ms | Allocations: 272)
+  Rendered comments/_form.html.erb (Duration: 12.5ms | Allocations: 5649)
+  Rendered posts/show.html.erb within layouts/application (Duration: 20.8ms | Allocations: 7840)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 0.6ms | Allocations: 15237)
+
+
+Started DELETE "/posts/1" for 127.0.0.1 at 2021-12-12 05:43:25 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YAa4U3kMa4TQZLdffiT7GfTE/rQHkvfc7xM+IfMOtnAl84UK3gF1ccq7V59FQu5kyeJh224OJ4MiYuc8WH0YpQ==", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:46:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:47:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  ↳ app/controllers/posts_controller.rb:47:in `destroy'
+  [1m[36mComment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/posts_controller.rb:47:in `destroy'
+  [1m[36mPost Destroy (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/posts_controller.rb:47:in `destroy'
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:47:in `destroy'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 9.3ms | Allocations: 6693)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-12 05:43:25 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 669)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms | Allocations: 7729)
+
+
+Started GET "/posts/news" for 127.0.0.1 at 2021-12-12 05:43:45 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"news"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1103)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=news):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-12 05:43:47 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 13.5ms | Allocations: 5624)
+  Rendered posts/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5689)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 12670)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-12-12 05:44:01 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"St/9fB5nZD5X7K6nA6pTCoAWIelHsvdektekhYn/CQcPKsAluWp6y00zTmc4zEZ3vTC+hi4uJwFfpn2YIoyn0g==", "post"=>{"title"=>"Blue Mountains", "content"=>"On this day, instead of taking our time with our coffee, we grabbed them in a rush and headed toward Central Station to catch our morning train. Destination: Katoomba Mission: Conquer World Heritage Blue Mountains National Park We had some down time on the train. Two hours to be exact. We have arrived! The mountains have a blue coloring due to the evaporation of oil from the eucalyptus forests. It was a beautiful day, so Jay and I made the most of it by ditching our tour bus and walking many of the trails. You’re looking at an ancient seabed. The famous Three Sisters rock formation. From left, Meehni, Wimlah and Gunnedoo. These gals are made of sandstone and were formed by erosion. You can read about the legend of the sisters here. These waterfalls nearly killed me. No joke. My hiking gear consisted of flip-flops and poor planning, and I almost turned around on several different occasions because the mud pits were too intimidating. BUT, Jay didn’t let me quit and I am so grateful! Wentworth …"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Blue Mountains"], ["content", "On this day, instead of taking our time with our coffee, we grabbed them in a rush and headed toward Central Station to catch our morning train. Destination: Katoomba Mission: Conquer World Heritage Blue Mountains National Park We had some down time on the train. Two hours to be exact. We have arrived! The mountains have a blue coloring due to the evaporation of oil from the eucalyptus forests. It was a beautiful day, so Jay and I made the most of it by ditching our tour bus and walking many of the trails. You’re looking at an ancient seabed. The famous Three Sisters rock formation. From left, Meehni, Wimlah and Gunnedoo. These gals are made of sandstone and were formed by erosion. You can read about the legend of the sisters here. These waterfalls nearly killed me. No joke. My hiking gear consisted of flip-flops and poor planning, and I almost turned around on several different occasions because the mud pits were too intimidating. BUT, Jay didn’t let me quit and I am so grateful! Wentworth …"], ["created_at", "2021-12-12 05:44:01.678027"], ["updated_at", "2021-12-12 05:44:01.678027"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts/4
+Completed 302 Found in 15ms (ActiveRecord: 5.6ms | Allocations: 4674)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-12 05:44:01 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 8.5ms | Allocations: 5693)
+  Rendered posts/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 7411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.4ms | Allocations: 14766)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-12 05:44:09 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 17.1ms | Allocations: 5686)
+  Rendered posts/show.html.erb within layouts/application (Duration: 22.3ms | Allocations: 7389)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.6ms | Allocations: 14851)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-12 05:44:20 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 7659)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-12 05:44:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 8.5ms | Allocations: 5688)
+  Rendered posts/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 7391)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.4ms | Allocations: 14750)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:44:33 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 716)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.3ms | Allocations: 7682)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-12 05:44:49 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 7.4ms | Allocations: 5596)
+  Rendered posts/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5660)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 12597)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-12-12 05:45:23 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"p79jhjudAp9m+g0vMmLDWle4UMwa/Qv9OdB/B30LBZziSl7fnJAcanwl7e8JBNYnap7Po3Nh26L0oaYa1nirSQ==", "post"=>{"title"=>"Bronte & Bondi beach time", "content"=>"After soaking up the city for two days, it was time to soak up the beach! We hopped on the #378 bus and took it all the way to Bronte Beach, about a 40-minute ride. What a view. We walked the ~1.5 mile cliff walk from Bronte to Bondi (pronounced “bon-dye”) and, of course, stopped often to enjoy the views. At right, steps from the cliff descend into pools that lay side by side with the ocean. The Bronte Baths. Doesn’t get cooler than this, does it?! At left, a view of the cliff walk. At right is a swimmer at the Bondi Baths, also known as Bondi Icebergs. We also passed Tamarama Beach, also known as Glam-a-rama beach. Here’s a look back at what we passed. Funny story… the nice couple who stopped to take this photo for us was the same couple who asked me to take a picture of them in Sydney on our first day. Turns out they were heading to Cairns too, but they left before we got there. Bondi …"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bronte & Bondi beach time"], ["content", "After soaking up the city for two days, it was time to soak up the beach! We hopped on the #378 bus and took it all the way to Bronte Beach, about a 40-minute ride. What a view. We walked the ~1.5 mile cliff walk from Bronte to Bondi (pronounced “bon-dye”) and, of course, stopped often to enjoy the views. At right, steps from the cliff descend into pools that lay side by side with the ocean. The Bronte Baths. Doesn’t get cooler than this, does it?! At left, a view of the cliff walk. At right is a swimmer at the Bondi Baths, also known as Bondi Icebergs. We also passed Tamarama Beach, also known as Glam-a-rama beach. Here’s a look back at what we passed. Funny story… the nice couple who stopped to take this photo for us was the same couple who asked me to take a picture of them in Sydney on our first day. Turns out they were heading to Cairns too, but they left before we got there. Bondi …"], ["created_at", "2021-12-12 05:45:23.891684"], ["updated_at", "2021-12-12 05:45:23.891684"]]
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:16:in `create'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts/5
+Completed 302 Found in 14ms (ActiveRecord: 7.4ms | Allocations: 3421)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2021-12-12 05:45:24 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 11.4ms | Allocations: 5685)
+  Rendered posts/show.html.erb within layouts/application (Duration: 14.5ms | Allocations: 7388)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms | Allocations: 14843)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:45:30 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.3ms | Allocations: 7815)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:47:00 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 79.5ms | ActiveRecord: 1.6ms | Allocations: 21800)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:47:35 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 63.0ms | ActiveRecord: 0.8ms | Allocations: 21808)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-12 05:48:01 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 58.3ms | Allocations: 17040)
+  Rendered posts/show.html.erb within layouts/application (Duration: 74.9ms | Allocations: 22231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 90.0ms | ActiveRecord: 1.8ms | Allocations: 32110)
+
+
+Started POST "/posts/4/comments" for 127.0.0.1 at 2021-12-12 05:49:31 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"UPHT8V0EUhMLTUHqJb+LB+Pjuu7H4K47KwHHBM99CQuMGKBniOpv9lfD55TWY12jKuJGtHbdmE1O64ZSxiQB6A==", "comment"=>{"name"=>"Peter Pan", "comment"=>"Greate experience !"}, "commit"=>"Create Comment", "post_id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "post_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Peter Pan"], ["comment", "Greate experience !"], ["created_at", "2021-12-12 05:49:31.590566"], ["updated_at", "2021-12-12 05:49:31.590566"], ["post_id", 4]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts/4
+Completed 302 Found in 23ms (ActiveRecord: 10.9ms | Allocations: 5846)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-12 05:49:31 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 2.0ms | Allocations: 274)
+  Rendered comments/_form.html.erb (Duration: 15.1ms | Allocations: 5649)
+  Rendered posts/show.html.erb within layouts/application (Duration: 23.8ms | Allocations: 7846)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.8ms | Allocations: 15212)
+
+
+Started POST "/posts/4/comments" for 127.0.0.1 at 2021-12-12 05:49:47 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"M6cIJI09HKqjAF8rL2VS9wE4XD5GVyJBM94gEanmZ252UjV9KjACX7nfv+sUA0eKPB7DUS/L8h7+r/kMApXJuw==", "comment"=>{"name"=>"Wendy", "comment"=>"Wow"}, "commit"=>"Create Comment", "post_id"=>"4"}
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("name", "comment", "created_at", "updated_at", "post_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wendy"], ["comment", "Wow"], ["created_at", "2021-12-12 05:49:47.574232"], ["updated_at", "2021-12-12 05:49:47.574232"], ["post_id", 4]]
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:5:in `create'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts/4
+Completed 302 Found in 36ms (ActiveRecord: 10.1ms | Allocations: 4636)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-12 05:49:47 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.5ms | Allocations: 218)
+  Rendered comments/_form.html.erb (Duration: 9.2ms | Allocations: 5645)
+  Rendered posts/show.html.erb within layouts/application (Duration: 15.6ms | Allocations: 7637)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.5ms | Allocations: 14987)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:50:04 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 774)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.3ms | Allocations: 7749)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-12 05:50:07 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.4ms | Allocations: 218)
+  Rendered comments/_form.html.erb (Duration: 8.0ms | Allocations: 5654)
+  Rendered posts/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 7645)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 25.2ms | ActiveRecord: 0.4ms | Allocations: 15107)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:50:23 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 7817)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:56:59 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.3ms | Allocations: 7724)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:57:05 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms | Allocations: 7717)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:57:57 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 5999)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 7182)
+
+
+  
+ActionView::Template::Error (undefined method `timestamp' for #<Post:0x00007f609c0cf6f8>):
+    15:                         <%= post.content %>
+    16:                     </div>
+    17:                     <div class="content">
+    18:                         <%= post.timestamp %>
+    19:                     </div>
+    20:                     <!-- <div class="comment-count">
+    21:                         <span class="tag is-rounded"><%# comment.count%></span>
+  
+app/views/posts/index.html.erb:18
+app/views/posts/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:58:25 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3717)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 4929)
+
+
+  
+ActionView::Template::Error (undefined method `timestamp' for #<Post:0x00007f6068020ab0>):
+    15:                         <%= post.content %>
+    16:                     </div>
+    17:                     <!-- <div class="content">
+    18:                         <%= post.timestamp %>
+    19:                     </div> -->
+    20:                     <!-- <div class="comment-count">
+    21:                         <span class="tag is-rounded"><%# comment.count%></span>
+  
+app/views/posts/index.html.erb:18
+app/views/posts/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:58:36 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 9249)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:59:16 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3944)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 5120)
+
+
+  
+ActionView::Template::Error (undefined method `create_at' for #<Post:0x0000000003479020>
+Did you mean?  created_at
+               created_at?
+               created_at=):
+    15:                         <%= post.content %>
+    16:                     </div>
+    17:                     <div class="content">
+    18:                         <%= post.create_at %>
+    19:                     </div>
+    20:                     <!-- <div class="comment-count">
+    21:                         <span class="tag is-rounded"><%# comment.count%></span>
+  
+app/views/posts/index.html.erb:18
+app/views/posts/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:59:30 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3907)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms | Allocations: 5086)
+
+
+  
+ActionView::Template::Error (undefined method `create_at' for #<Post:0x00007f609c4dc228>
+Did you mean?  created_at
+               created_at?
+               created_at=):
+    15:                         <%= post.content %>
+    16:                     </div>
+    17:                     <div class="content">
+    18:                         <!-- <%= post.create_at %> -->
+    19:                     </div>
+    20:                     <!-- <div class="comment-count">
+    21:                         <span class="tag is-rounded"><%# comment.count%></span>
+  
+app/views/posts/index.html.erb:18
+app/views/posts/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:59:45 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3945)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 5124)
+
+
+  
+ActionView::Template::Error (undefined method `createed_at' for #<Post:0x00007f609cb50d70>
+Did you mean?  created_at
+               created_at?
+               created_at=):
+    15:                         <%= post.content %>
+    16:                     </div>
+    17:                     <div class="content">
+    18:                         <!-- <%= post.createed_at %> -->
+    19:                     </div>
+    20:                     <!-- <div class="comment-count">
+    21:                         <span class="tag is-rounded"><%# comment.count%></span>
+  
+app/views/posts/index.html.erb:18
+app/views/posts/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-12-12 05:59:54 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.4ms | Allocations: 9257)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 06:00:05 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms | Allocations: 8989)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2021-12-12 06:00:09 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 8.9ms | Allocations: 5892)
+  Rendered posts/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 8000)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.7ms | Allocations: 15521)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 06:00:18 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 7775)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 06:00:35 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.5ms | Allocations: 8974)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 06:01:04 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1047)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms | Allocations: 9085)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 06:01:28 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1051)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 9104)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2021-12-12 06:01:32 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 11.2ms | Allocations: 5866)
+  Rendered posts/show.html.erb within layouts/application (Duration: 17.0ms | Allocations: 7944)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.6ms | Allocations: 15440)
+
+
+Started GET "/posts/5/edit" for 127.0.0.1 at 2021-12-12 06:01:35 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:41:in `edit'
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 12.0ms | Allocations: 6133)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 13.6ms | Allocations: 6427)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.2ms | Allocations: 13919)
+
+
+Started PATCH "/posts/5" for 127.0.0.1 at 2021-12-12 06:01:43 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"vAtIgEhf8SL1ZT95cB1PFhgE53FkZAdNtSI5hCF/7AlNuP0Ic9jFeRIm+X8WVzoxEYgwesNqOfA495jdCQ/1dw==", "post"=>{"title"=>"Bronte & Bondi beach time", "content"=>"After soaking up the city for two days, it was time to soak up the beach! We hopped on the #378 bus and took it all the way to Bronte Beach, about a 40-minute ride. What a view. We walked the ~1.5 mile cliff walk from Bronte to Bondi (pronounced “bon-dye”) and, of course, stopped often to enjoy the views. At right, steps from the cliff descend into pools that lay side by side with the ocean. The Bronte Baths. Doesn’t get cooler than this, does it?! At left, a view of the cliff walk. At right is a swimmer at the Bondi Baths, also known as Bondi Icebergs. We also passed Tamarama Beach, also known as Glam-a-rama beach. Here’s a look back at what we passed. Funny story… the nice couple who stopped to take this photo for us was the same couple who asked me to take a picture of them in Sydney on our first day. Turns out they were heading to Cairns too, but they left before we got there. Bondi …."}, "commit"=>"Update Post", "id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:30:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:32:in `update'
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "After soaking up the city for two days, it was time to soak up the beach! We hopped on the #378 bus and took it all the way to Bronte Beach, about a 40-minute ride. What a view. We walked the ~1.5 mile cliff walk from Bronte to Bondi (pronounced “bon-dye”) and, of course, stopped often to enjoy the views. At right, steps from the cliff descend into pools that lay side by side with the ocean. The Bronte Baths. Doesn’t get cooler than this, does it?! At left, a view of the cliff walk. At right is a swimmer at the Bondi Baths, also known as Bondi Icebergs. We also passed Tamarama Beach, also known as Glam-a-rama beach. Here’s a look back at what we passed. Funny story… the nice couple who stopped to take this photo for us was the same couple who asked me to take a picture of them in Sydney on our first day. Turns out they were heading to Cairns too, but they left before we got there. Bondi …."], ["updated_at", "2021-12-12 06:01:43.386215"], ["id", 5]]
+  ↳ app/controllers/posts_controller.rb:32:in `update'
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:32:in `update'
+Redirected to https://localhost-blog-duylong.paiza-user-free.cloud:3000/posts/5
+Completed 302 Found in 21ms (ActiveRecord: 5.7ms | Allocations: 5461)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2021-12-12 06:01:43 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:39
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:40
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered comments/_form.html.erb (Duration: 10.0ms | Allocations: 5684)
+  Rendered posts/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 7388)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.4ms | Allocations: 14755)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 06:01:46 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.4ms | Allocations: 7897)
+
+

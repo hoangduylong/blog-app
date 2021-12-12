@@ -11,45 +11,48 @@
 
   <body>
     <section class="hero is-primary is-medium">
-  <!-- Hero head: will stick at the top -->
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <%= link_to "Home", root_path, class: "navbar-item" %>
-          <span class="navbar-burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end">
-              
-            <%= link_to "Create new post", new_post_path, class:"navbar-item" %>
-            <% if user_signed_in? %>
-              <%= link_to current_user.email, users_show_path, class:"navbar-item" %>
-              <%= link_to "Logout", destroy_user_session_path, class:"navbar-item", method: :delete %>
-            <% else %>
-              <%= link_to "Register", new_user_registration_path, class:"navbar-item" %>
-              <%= link_to "Login", new_user_session_path, class:"navbar-item" %>
-            <% end %>  
+    <!-- Hero head: will stick at the top -->
+    <div style="background-image:
+    url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZ3xlbnwwfHwwfHw%3D&w=1000&q=80');">
+    <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <%= link_to "Home", root_path, class: "button is-primary is-inverted" %>
+              <span class="navbar-burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <%= link_to "Create new post", new_post_path, class:"navbar-item" %>
+                <% if user_signed_in? %>
+                  <%= link_to current_user.email, users_show_path, class:"navbar-item" %>
+                  <%= link_to "Logout", destroy_user_session_path, class:"navbar-item", method: :delete %>
+                <% else %>
+                  <%= link_to "Register", new_user_registration_path, class:"navbar-item" %>
+                  <%= link_to "Login", new_user_session_path, class:"navbar-item" %>
+                <% end %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </nav>
-  </div>
+        </nav>
+    </div>
 
 
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">
+      <h1 class="title" style="font-size: 60px">
           <%= yield :page_title %>
+          <img src="https://www.pinclipart.com/picdir/big/51-511102_design-free-logo-srj-hd-logo-png-clipart.png" width="100" height="100" alt="Logo">
       </h1>
     </div>
   </div>
 
 </section>
+
     <%= yield %>
   </body>
 </html>

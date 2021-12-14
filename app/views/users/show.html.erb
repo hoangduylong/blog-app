@@ -1,0 +1,26 @@
+<div class="section">
+  <div class="container is-flex is-justify-content-center">
+    <div class="content is-medium is-narrow" style="width: 480px">
+      <h2>User information</h2>
+      <div class="form-inputs">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" value=<%=@user.name%> disabled />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="text" value=<%=@user.email%> disabled />
+          </div>
+        </div>
+        <div style="font-size: 14px; text-align: left; margin-top: 16px">
+          <span>
+            <a href="/users/edit">Edit information</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,7 @@
         <div class="media-content">
             <div class="content">
                 <p>
-                    <strong><%= comment.name %>: </strong>
+                    <strong><%= comment.user.name if comment.user  %>: </strong>
                     <%= comment.comment %>
                 </p>
             </div>

@@ -9,7 +9,9 @@
             </div>
         </div>
         
+        <% if comment.user == current_user then %>
         <%= link_to "Delete", [comment.post, comment], 
         method: :delete, class: "button is-danger", data: { confirm: "Are you sure?" } %>
+        <% end %>
     </article>
 </div>
